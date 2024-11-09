@@ -1,19 +1,35 @@
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Confetti from 'react-confetti';
+import { useWindowSize } from 'react-use';
+import { MdPlayArrow } from "react-icons/md";
 
 const Intro = () => {
     const navigate = useNavigate();
+    const [showConfetti, setShowConfetti] = useState(true);
+    const { width, height } = useWindowSize();
+
+    const handleEnterCommunity = () => {
+        setShowConfetti(false);
+        navigate("/vision");
+    };
+
     return (
-        <div className="app h-screen flex flex-col md:flex-row justify-center items-center font-righteous">
-            <img src="/community-icon.png" alt="" />
-            <div className="flex flex-col text-center justify-center items-center md:mt-[70px] md:text-left">
-                <div>
-                    <p className="text-[45px] text-white font-semibold -mt-[20px] md:text-[60px] lg:text-[80px]">ConnectPUB</p>
-                    <p className="text-[14px] md:text-[16px] ml-1 text-white -mt-[10px] lg:text-[22px]">Upskill By Harnessing the Power of Community!</p>
-                </div>
-                <button onClick={() => navigate("/vision")} className="mt-8 text-[20px] text-black rounded-md bg-white font-semibold border px-[20px] py-[10px] md:px-[50px] md:py-[20px] lg:px-[70px] lg:py-[25px] hover:bg-black hover:text-white">Get Started</button>
-            </div>
+        <div className="app h-screen flex flex-col justify-center items-center font-righteous">
+            {/* Display Confetti when showConfetti is true */}
+            {showConfetti && <Confetti width={width} height={height} numberOfPieces={40}
+                gravity={0.1} />}
+
+            <img className="w-2/3 lg:w-1/3" src="/logo.png" alt="" />
+            <p className="text-[#333333] md:text-2xl">Upskill By Harnessing the Power of Community!</p>
+            <button
+                onClick={handleEnterCommunity}
+                className="mt-4 text-[20px] text-[#333333] rounded-md bg-white font-semibold border px-[20px] py-[10px] md:px-[40px] md:py-[15px] lg:px-[60px] lg:py-[20px] hover:bg-[#4285F4] hover:text-white flex items-center transition delay-150 ease-in-out"
+            >
+                Enter The Community <MdPlayArrow className='text-2xl mt-1' />
+            </button>
         </div>
     );
-}
+};
 
 export default Intro;

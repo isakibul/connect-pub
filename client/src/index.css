@@ -8,11 +8,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fbbf24;
+  /* background-color: #fbbf24; */
 }
 
 
 .app, .layout, .mobile-nav{
-   background: rgb(2,0,36);
-   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,75,99,1) 57%, rgba(26,82,105,1) 75%, rgba(31,100,120,1) 100%, rgba(0,212,255,1) 100%);
+  background: "#edece8";
+   /* background: rgb(2,0,36); */
+   /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,75,99,1) 57%, rgba(26,82,105,1) 75%, rgba(31,100,120,1) 100%, rgba(0,212,255,1) 100%); */
 }

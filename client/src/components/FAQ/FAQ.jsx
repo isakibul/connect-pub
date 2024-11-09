@@ -50,8 +50,8 @@ export default function FAQ() {
     };
 
     return (
-        <div className="font-rubik w-[100%]">
-            <p className="text-center mt-[80px] mb-[60px] text-[20px] md:text-[40px] font-righteous font-semibold text-white" >Frequently Asked Questions [FAQs]</p>
+        <div className="font-rubik px-4 md:px-[15px] lg:px-[200px]">
+            <p className="text-center mt-[100px] mb-[40px] text-[20px] md:text-[40px] font-righteous font-semibold text-[#333333]" >Frequently Asked Questions [FAQs]</p>
             <div className="faqs mb-[100px]">
                 {faqs.map((faq, index) => (
                     <FAQassist faq={faq} index={index} key={index} toggleFAQ={toggleFAQ} />
