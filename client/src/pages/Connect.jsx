@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { GrOrganization } from "react-icons/gr";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPersonChalkboard } from "react-icons/fa6";
-import exploreCover from "/explore-cover.jpg";
+import connectCover from "/cover/connect-cover.png";
 import useFetchSeniors from "../hooks/useFetchSeniors";
 import { HashLoader } from 'react-spinners';
 import { FaWhatsappSquare } from "react-icons/fa";
@@ -32,9 +32,9 @@ const Connect = () => {
     return (
         <div>
             <motion.div
-                className="relative text-right py-10 bg-cover bg-center flex items-center justify-end"
+                className="relative text-left py-10 bg-cover bg-center flex items-center justify-start"
                 style={{
-                    backgroundImage: `url(${exploreCover})`,
+                    backgroundImage: `url(${connectCover})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     height: '300px',
@@ -45,7 +45,7 @@ const Connect = () => {
             >
                 <div className="absolute inset-0 bg-black opacity-70 backdrop-blur-sm"></div> {/* Blurred overlay */}
                 <motion.p
-                    className="relative font-righteous text-xl md:text-3xl text-white font-semibold mr-10"
+                    className="relative font-righteous text-xl md:text-3xl text-white font-semibold ml-10"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 1 }}

@@ -99,7 +99,7 @@ const Explore = () => {
                 </motion.p>
             </motion.div>
 
-            <div className="my-20 grid grid-cols-1 md:grid-cols-2 md:px-20 lg:px-48 gap-10">
+            <div className="my-20 grid grid-cols-1 md:grid-cols-2 px-6 md:px-20 lg:px-48 gap-10">
                 {/* resources card */}
                 {cardData.map((card, index) => (
                     <motion.div

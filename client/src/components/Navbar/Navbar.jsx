@@ -55,7 +55,7 @@ const Navbar = () => {
                 </div>
                 <div className="md:hidden">
                     <button
-                        className="text-5xl p-3 text-white rounded-full hover:outline-white ease-out duration-300"
+                        className="text-5xl p-3 text-[#333333] rounded-full hover:outline-white ease-out duration-300"
                         onClick={() => setNavOpen(!navOpen)}
                     >
                         <IoMdMenu />
@@ -83,12 +83,12 @@ const Navbar = () => {
 
             {/* Mobile menu */}
             {navOpen && (
-                <div className="mobile-nav text-2xl flex flex-col gap-8 justify-center items-center text-center fixed top-0 left-0 right-0 bottom-0 z-50">
+                <div className="mobile-nav text-2xl flex flex-col gap-8 justify-center items-center text-center fixed inset-0 bg-white z-50">
                     <ul className="flex flex-col gap-8 text-xl font-semibold">
                         {navContent.map((item, idx) => (
                             <li
                                 key={idx}
-                                className="ease-in duration-200 cursor-pointer text-white hover:text-gray"
+                                className="ease-in duration-200 cursor-pointer text-[#333333] hover:text-gray"
                             >
                                 <Link
                                     to={item.path}
@@ -100,13 +100,14 @@ const Navbar = () => {
                         ))}
                     </ul>
                     <button
-                        className='text-3xl text-white hover:text-5xl' // Button to close mobile nav
-                        onClick={() => setNavOpen(false)} // Close nav on click
+                        className='text-4xl'
+                        onClick={() => setNavOpen(false)}
                     >
                         <IoClose />
                     </button>
                 </div>
             )}
+
         </nav>
     );
 }
