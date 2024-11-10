@@ -34,6 +34,7 @@ By simply searching for a particular domain or skill, students can find a list o
 To run CONNECTPUB locally, follow these steps:
 Clone the repository: `git clone https://github.com/isakibul/connect-pub`
 Navigate to the project directory: `cd connect-pub`
+
 For client side:
 1. Navigate to client: `cd client`
 2. Install dependencies: `npm install`
