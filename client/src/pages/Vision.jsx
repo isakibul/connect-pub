@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import FAQ from "../components/FAQ/FAQ";
 import visionCover from "/pub_campus.jpg";
+import { useNavigate } from 'react-router-dom';
 
 const Vision = () => {
     // Animation variants
@@ -8,6 +9,8 @@ const Vision = () => {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0 }
     };
+
+    const navigate = useNavigate();
 
     return (
         <div className="">
@@ -40,7 +43,7 @@ const Vision = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1, duration: 1 }}
-                    onClick={() => console.log("Button clicked!")}
+                    onClick={() => { navigate("from-page") }}
                 >
                     Join the Community
                 </motion.button>

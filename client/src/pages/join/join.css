@@ -1,0 +1,290 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 700px;
+  background-color: #ffffff;
+  margin: 60px 0;
+  border: 1px solid #80cbd9;
+}
+
+.formContainer{
+  padding: 60px;
+}
+
+.formContainer div{
+  margin-bottom: 15px;
+}
+
+.formComponent{
+  margin-top: 35px;
+}
+
+img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.nameField{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+label{
+  font-weight: 500;
+}
+
+.nameField > div {
+  flex: 1; 
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 5px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  border-radius: 2px;
+  border: 0;
+  border-bottom: 1px solid #a5a8a6;
+  background: transparent;
+  font-family: "Montserrat", sans-serif;
+}
+
+input[type="email"],
+input[type="mobileNumber"],
+input[name="mobileNumber"],
+input[name="city"],
+input[name="postcode"],
+input[name="referral"],
+select{
+  width: 48%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  outline: none;
+  border-color: #308391;
+  background: transparent;
+}
+
+.star{
+  margin-left: 3px;
+  color: red;
+  font-size: 17px;
+}
+
+.errorMsg {
+  color: red;
+  min-height: 20px;
+  font-size: 14px;
+  visibility: hidden;
+}
+
+.errorMsg.visible {
+  visibility: visible;
+}
+
+.otherInputErrorField{
+  position: absolute;
+  margin-top: -30px;
+  color: red;
+  font-size: 14px;
+}
+
+.involvement-div{
+  margin-top: 10px;
+}
+
+.involvement-div input[type="radio"] {
+  transform: scale(1.5);
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.involvement-div span{
+  margin-top: -13px; 
+  margin-right: 8px;
+}
+
+.involvement-div input[type="text"]{
+  margin-top: -17px;
+}
+
+.otherField {
+  display: flex;
+  align-items: center;
+}
+
+.otherTextInput {
+  height: 24px;
+  padding: 0 4px;
+}
+
+.otherField input[type="radio"]{
+  margin-top: 2px;
+}
+
+.otherTextInput{
+  height: 22px;
+}
+
+.interest-div{
+  margin-top: 12px;
+}
+
+.interest-div div{
+  display: flex;
+}
+
+.interest-div input[type="checkbox"] {
+  transform: scale(1.4);
+  margin-right: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.interest-div span{
+  margin-top: -13px; 
+  margin-right: 8px;
+}
+
+.interest-div input[type="text"]{
+  margin-top: -17px;
+}
+
+.button-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn{
+  padding: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0;
+  border: none;
+  background: #308391;
+  color: #fff;
+}
+
+button[type="submit"] {
+  width: 25%;
+  padding: 8px;
+  font-size: 16px;
+  background: #308391;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.formClearButton{
+   color: white;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #1b5b66;
+  background: transparent;
+}
+
+.modal{
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal p{
+  font-size: 18px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* -----responsive css----- */
+@media (max-width: 768px) {
+  form {
+    width: 600px;
+    margin: 40px 0;
+    padding-bottom: 50px;
+  }
+
+  .formContainer{
+    padding: 20px;
+  }
+
+  .modal p{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  form {
+    width: 550px;
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  form {
+    width: 100%;
+    margin: 0;
+    border: 0;
+  }
+}
+
+@media (max-width: 530px) {
+  .modal p{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 430px) {
+  .nameField{
+    flex-direction: column;
+    gap: 0px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select{
+    font-size: 14px;
+  }
+
+  input[type="email"],
+  input[name="city"],
+  input[name="postcode"],
+  input[name="referral"],
+  select{
+    width: 100%;
+  }
+
+  input[name="mobileNumber"]{
+    width: 100%;
+  }
+
+  button[type="submit"]{
+    width: 40%;
+  }
+
+  .btn{
+    padding: 8px;
+  }
+}
