@@ -25,12 +25,12 @@ By simply searching for a particular domain or skill, students can find a list o
 2. Tailwind CSS
 3. MySQL Database
 
-## Prerequisites
+## Prerequisites 📋
 - Node.js (version 15.0.0 or higher)
 - MySQL
 - npm or yarn
 
-## Getting Started
+## Getting Started 🔥
 To run CONNECTPUB locally, follow these steps:
 Clone the repository: `git clone https://github.com/isakibul/connect-pub`
 Navigate to the project directory: `cd connect-pub`
@@ -38,6 +38,7 @@ For client side:
 1. Navigate to client: `cd client`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
+
 For server side:
 1. Navigate to server: `cd server`
 2. Install dependencies: `npm install`
