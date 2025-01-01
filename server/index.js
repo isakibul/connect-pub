@@ -1,4 +1,3 @@
-// index.js
 const express = require("express");
 const dotenv = require("dotenv");
 const security = require("./config/security");
@@ -15,7 +14,7 @@ security(app);
 app.use(express.json());
 
 /**
- * Health check route
+ * Health checker route
  */
 app.get("/health", (_req, res) => {
   res.status(200).json({ message: "Health is okay!" });
